@@ -1,11 +1,11 @@
 from flask import Flask
-
+from flask import render_template
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
-    return '<h2>PetHelper home page</h2>'
+    return render_template('page01.html')
 
 
 @app.route('/results')
