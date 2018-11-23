@@ -1,5 +1,6 @@
-from flask import Flask
+from flask import Flask, request
 from flask import render_template
+import db
 app = Flask(__name__)
 
 
@@ -23,16 +24,13 @@ def create_userpage():
     return "Create profile"
 
 
-if __name__ == '__main__':
-
-
-   app.run(debug=True)
-
 
 @app.route('/search')
 def search_for_person():
     q = request.args.get('query')
-    users = db.get_users_by_name (q)
-    return render_template('page01.html')
+    users = db.get_users_by_name(q)
+    return render_template('page01.html', users=users)
 
 
+if __name__ == '__main__':
+   app.run(debug=True)
