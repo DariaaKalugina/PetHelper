@@ -27,3 +27,12 @@ if __name__ == '__main__':
 
 
    app.run(debug=True)
+
+
+@app.route('/search')
+def search_for_person():
+    q = request.args.get('query')
+    users = db.get_users_by_name (q)
+    return render_template('page01.html')
+
+
