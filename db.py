@@ -1,28 +1,29 @@
 _users = {
     'paul': {
     'name': 'Pavel Okopnyi',
-    'job_title': 'PhD Candidate',
+    'birth': '29.01.1984',
     'workplace': 'UiB'
     },
 
     'igor': {
     'name': 'Igor Novikov',
-    'job_title': 'Designer',
+    'birth': '30.04.1973',
     'workplace': 'ArtLebedev'
     },
 
     'boris': {
     'name': 'Boris Ivanov',
-    'job_title': 'Cat',
+    'birth': '26.02.19',
     'workplace': 'HSE Sedova'
     },
 
     'alena': {
     'name': 'Alena Popova',
-    'job_title': 'Data Scientist',
+    'birth': 'Data Scientist',
     'workplace': 'ITMO'
     }
 }
+
 
 _user_list = []
 
