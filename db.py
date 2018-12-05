@@ -1,40 +1,40 @@
 _users = {
-    'paul': {
-    'name': 'Pavel Okopnyi',
-    'birth': '29.01.1984',
-    'workplace': 'UiB'
-    },
 
-    'igor': {
-    'name': 'Igor Novikov',
-    'birth': '30.04.1973',
-    'workplace': 'ArtLebedev'
+    '222222': {
+    'id': '222222',
+    'fio': 'Igor Novikov',
+    'datebirth': '26.12.01',
+    'adress': 'SPB, Sedova 55',
+    'metro': 'Lomonosovskaya',
+    'tel': '345678',
+    'info': 'Not a social guy'
     },
-
-    'boris': {
-    'name': 'Boris Ivanov',
-    'birth': '26.02.19',
-    'workplace': 'HSE Sedova'
+    '223452': {
+    'id': '223452',
+    'fio': 'Gleb Vyacheslavovich',
+    'datebirth': '11.11.93',
+    'adress': 'SPB, Macdonalds, Galerea',
+    'metro': 'Pl. Vosstaniya',
+    'tel': '46900987',
+    'info': 'I like dogs'
     },
-
-    'alena': {
-    'name': 'Alena Popova',
-    'birth': 'Data Scientist',
-    'workplace': 'ITMO'
+    '0987654':{
+    'id': '0987654',
+    'fio': 'Bradley Cooper',
+    'datebirth': 'dont wanna share',
+    'adress': 'SPB, Grand Europe Hotel',
+    'metro': 'Nevskiy Prospect',
+    'tel': '98765443232',
+    'info': 'Love my wife'
     }
 }
 
-
-_user_list = []
-
-for login, user_data in _users.items():
-    _new_element = {'login': login}
-    _new_element.update(user_data)
-    _user_list.append(_new_element)
-
-
-
+# Get users filtered by name
 def get_users_by_name(q):
-    results = _user_list
-
+    results = []
+    # SEARCH
     return results
+
+
+def get_user(username):
+    return _users.get(username)
