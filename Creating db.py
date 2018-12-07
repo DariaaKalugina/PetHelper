@@ -7,6 +7,7 @@ c = conn.cursor()
 c.execute('''
 CREATE TABLE users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT,
     fio TEXT,
     datebirth TEXT,
     adress TEXT,
@@ -22,7 +23,7 @@ conn.commit()
 # Our base data
 users = [
     {
-        'id': '222222',
+        'username': 'Igoresha',
         'fio': 'Igor Novikov',
         'datebirth': '26.12.01',
         'adress': 'SPB, Sedova 55',
@@ -31,7 +32,7 @@ users = [
         'info': 'Not a social guy'
     },
     {
-        'id': '223452',
+        'username': 'Glebushka',
         'fio': 'Gleb Vyacheslavovich',
         'datebirth': '11.11.93',
         'adress': 'SPB, Macdonalds, Galerea',
@@ -40,7 +41,7 @@ users = [
         'info': 'I like dogs'
     },
 {
-        'id': '0987654',
+        'username': 'Bread',
         'fio': 'Bradley Cooper',
         'datebirth': 'dont wanna share',
         'adress': 'SPB, Grand Europe Hotel',
