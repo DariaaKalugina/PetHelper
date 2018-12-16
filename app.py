@@ -19,9 +19,9 @@ def index():
     return render_template('page01.html')
 
 
-@app.route('/profile')
+@app.route('/sing_in')
 def profile():
-    return 'Ваш профиль'
+    return 'Войти'
 
 
 @app.route('/ads')
@@ -67,8 +67,8 @@ def add_user():
         user = {}
         user['username'] = request.form.get('username')
         user['name'] = request.form.get('name')
+        user['password'] = request.form.get('password')
         user['datebirth'] = request.form.get('datebirth')
-        user['adress'] = request.form.get('adress')
         user['metro'] = request.form.get('metro')
         user['tel'] = request.form.get('tel')
         user['info'] = request.form.get('info')
@@ -90,9 +90,9 @@ def add_user():
         else:
 
             c.execute("INSERT INTO users "
-                      "(username, name, datebirth, adress, metro, tel, info) "
+                      "( name, username, password, datebirth, metro, tel, info) "
                       "VALUES "
-                      "('{username}','{name}','{datebirth}','{adress}','{metro}','{tel}','{info}')"
+                      "('{name}', '{username}', '{password}', '{datebirth}','{metro}','{tel}','{info}')"
                       "".format(**user))
 
             conn.commit()

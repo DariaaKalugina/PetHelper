@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<div lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>PetHelper</title>
 </head>
-<body>
+<div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand"><p style="font-weight: bold; color: purple;">PetHelper</p></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,13 +15,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="profile"><button type="button" class="btn btn-outline-success">Профиль</button> <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="ads"><button type="button" class="btn btn-outline-success">Объявления</button> <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="ads"><button type="button" class="btn btn-outline-success">Объявления</button></a>
+        <a class="nav-link" href="add_user"><button type="button" class="btn btn-outline-success">Регистрация</button></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="/add_user"><button type="button" class="btn btn-outline-success">Войти</button></a>
+        <a class="nav-link disabled" href="sing_in"><button type="button" class="btn btn-outline-success">Войти</button></a>
       </li>
     </ul>
     <form action="/search" method="get">
@@ -30,8 +30,11 @@
     </form>
   </div>
 </nav>
-
-
+<div>
+        <img class="d-block w-0.2" width="320px" src="http://superomsk.ru/images/news/full/2018/04/b9777d3ea8abe73bbb325e4cc5eb5f4e.jpg">
+        <img class="d-block w-0.2" width="320px" src="https://detki.today/wp-content/uploads/2015/11/28402222-2015.jpg">
+        <img class="d-block w-0.2" width="320px" src="http://gamejulia.ru/images/i/krolik(2).jpg">
+</div>
 
 {% if users %}
     {{users}}
