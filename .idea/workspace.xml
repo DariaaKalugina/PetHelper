@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e45f2dff-37ed-4592-b87a-27845513743e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/add_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/add_user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/page01.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page01.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/page01.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="32" column="45" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+            <state relative-caret-position="352">
+              <caret line="36" column="6" lean-forward="true" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -143,7 +140,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="app" type="PythonConfigurationType" factoryName="Python" singleton="true" temporary="true">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" singleton="true">
       <module name="PetHelper2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -165,11 +162,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.app" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -181,7 +173,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544179784227</updated>
-      <workItem from="1544983593158" duration="4982000" />
+      <workItem from="1544983593158" duration="5286000" />
     </task>
     <task id="LOCAL-00001" summary="Users">
       <created>1544188691898</created>
@@ -190,11 +182,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544188691898</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="я вставила картинки, пока не знаю как их норм сделать&#10;нужна помощь&#10;и не получилось привязать страницу&#10;в меню теперь : объявления, регистрация, войти">
+      <created>1544988900152</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1544988900152</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4982000" />
+    <option name="totallyTimeSpent" value="5286000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -230,7 +229,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Users" />
-    <option name="LAST_COMMIT_MESSAGE" value="Users" />
+    <MESSAGE value="я вставила картинки, пока не знаю как их норм сделать&#10;нужна помощь&#10;и не получилось привязать страницу&#10;в меню теперь : объявления, регистрация, войти" />
+    <option name="LAST_COMMIT_MESSAGE" value="я вставила картинки, пока не знаю как их норм сделать&#10;нужна помощь&#10;и не получилось привязать страницу&#10;в меню теперь : объявления, регистрация, войти" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/add user.py">
@@ -280,8 +280,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/page01.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="32" column="45" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+        <state relative-caret-position="352">
+          <caret line="36" column="6" lean-forward="true" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
         </state>
       </provider>
     </entry>
