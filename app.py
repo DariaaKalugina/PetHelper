@@ -21,14 +21,17 @@ def index():
 
 @app.route('/sing_in')
 def profile():
-    return 'Войти'
+    return render_template('sing_in.html')
 
 
 @app.route('/ads')
 def ads():
-    return 'Объявления'
+    return render_template('ads.html')
 
 
+@app.route('/newad')
+def newad():
+    return render_template('newad.html')
 
 @app.route('/user/<username>/')
 

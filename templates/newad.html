@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="newad" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Add new user</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Создайте своё объявление!</h1>
+
+        <form method="post" action="/add_ad">
+            <div class="form-group">
+
+                <label>Выберете услугу</label>
+                <input class="form-control" type="text" name="service" required>
+
+                <label>Выберете вид животного</label>
+                <input class="form-control" type="text" name="type" required>
+
+                <label>Кличка</label>
+                <input class="form-control" type="text" name="name">
+
+                <label>Возраст питомца</label>
+                <input class="form-control" type="text" name="petage">
+
+                <label>Дополнительная информация о питомце</label>
+                <input class="form-control" type="text" name="info">
+
+                <label>Фото</label>
+                <input class="form-control" type="url" name="petphoto">
+            </div>
+            <button type="submit" class="btn btn-success">Добавить объявление</button>
+        </form>
+    </div>
+</body>
+</html>
