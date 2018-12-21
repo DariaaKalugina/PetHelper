@@ -13,21 +13,10 @@
 </head>
 <body>
 <div
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar navbar-expand-lg navbar-light bg-light" href = "page01">
   <a class="navbar-brand"><p style="font-weight: bold; color: purple;">PetHelper</p></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+        </button>
   <div>
-    {% if user_created %}
-
-        <div class="alert alert-success">User Created</div>
-
-    {% elif error_message=="user_exists" %}
-
-        <div class="alert alert-danger">User with this login already exists</div>
-
-    {%endif%}
 
     <div class="container">
 
@@ -81,7 +70,7 @@
 
             </div>
 
-            <button type="submit" class="btn btn-success">Создать объявление</button>
+            <button type="submit" class="btn btn-success" style="font-weight: bold">Создать объявление</button>
 
         </form>
 
