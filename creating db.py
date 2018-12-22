@@ -9,11 +9,13 @@ CREATE TABLE users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT,
     fio TEXT,
+    password TEXT,
     datebirth TEXT,
     adress TEXT,
     metro TEXT,
     tel TEXT,
-    info TEXT
+    info TEXT,
+    photo TEXT
 )
 ''')
 
@@ -40,7 +42,7 @@ users = [
         'tel': '46900987',
         'info': 'I like dogs'
     },
-{
+    {
         'username': 'Bread',
         'fio': 'Bradley Cooper',
         'datebirth': 'dont wanna share',
@@ -50,6 +52,22 @@ users = [
         'info': 'Love my wife'
     },
 ]
+
+c.execute('''
+    UPDATE users
+    SET tel="444444444444"
+    WHERE username="Bread"
+''')
+conn.commit()
+
+#Adding it in the loop
+for user in users:
+    c.execute("INSERT INTO users "
+              "(username, fio, datebirth, adress, metro, tel, info)"
+              "VALUES "
+              "('{username}', '{fio}', '{datebirth}', '{adress}', '{metro}', '{tel}', '{info}')".FORMAT(**user))
+    conn.commit
+
 
 # Add second table
 c.execute('''
@@ -63,6 +81,15 @@ c.execute('''
     )
 ''')
 conn.commit()
+
+advert = [
+    { 'service': 'Wash my cat pls',
+      'animalkind': 'cat',
+      'nickname': 'Tisha',
+      'requirements': 'Guys, хочу мыть кота раз в месяц (у меня дома). Лично я боюсь царапин. Это ведь не сложно? Буду рада, пишите. Он спокойный, но очень пугливый.',
+      'datetime': '2019-01-15'
+    }
+]
 
 c.execute('''
     INSERT INTO advert (nickname, service, animalkind)

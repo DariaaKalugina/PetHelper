@@ -1,7 +1,6 @@
 _users = {
 
-    '222222': {
-    'id': '222222',
+    'Igor': {
     'fio': 'Igor Novikov',
     'datebirth': '26.12.01',
     'adress': 'SPB, Sedova 55',
@@ -9,8 +8,7 @@ _users = {
     'tel': '345678',
     'info': 'Not a social guy'
     },
-    '223452': {
-    'id': '223452',
+    'Gleb': {
     'fio': 'Gleb Vyacheslavovich',
     'datebirth': '11.11.93',
     'adress': 'SPB, Macdonalds, Galerea',
@@ -18,8 +16,7 @@ _users = {
     'tel': '46900987',
     'info': 'I like dogs'
     },
-    '0987654':{
-    'id': '0987654',
+    'Bradley':{
     'fio': 'Bradley Cooper',
     'datebirth': 'dont wanna share',
     'adress': 'SPB, Grand Europe Hotel',

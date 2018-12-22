@@ -1,0 +1,54 @@
+diff --git a/app.db b/app.db
+index a8534da..592d6a8 100644
+Binary files a/app.db and b/app.db differ
+diff --git a/app.py b/app.py
+index 1834f9d..0921059 100644
+--- a/app.py
++++ b/app.py
+@@ -69,7 +69,7 @@ def add_user():
+ 
+         user = {}
+         user['username'] = request.form.get('username')
+-        user['name'] = request.form.get('name')
++        user['fio'] = request.form.get('fio')
+         user['password'] = request.form.get('password')
+         user['datebirth'] = request.form.get('datebirth')
+         user['metro'] = request.form.get('metro')
+@@ -93,10 +93,9 @@ def add_user():
+         else:
+ 
+             c.execute("INSERT INTO users "
+-                      "( name, username, password, datebirth, metro, tel, info) "
++                      "( username, password, datebirth, metro, tel, info) "
+                       "VALUES "
+-                      "('{name}', '{username}', '{password}', '{datebirth}','{metro}','{tel}','{info}')"
+-                      "".format(**user))
++                      "('{username}', '{password}', '{datebirth}','{metro}','{tel}','{info}')".format(**user))
+ 
+             conn.commit()
+ 
+diff --git a/creating db.py b/creating db.py
+index 36c9b46..b87360e 100644
+--- a/creating db.py	
++++ b/creating db.py	
+@@ -9,6 +9,7 @@ CREATE TABLE users (
+     id INTEGER PRIMARY KEY AUTOINCREMENT,
+     username TEXT,
+     fio TEXT,
++    password TEXT,
+     datebirth TEXT,
+     adress TEXT,
+     metro TEXT,
+diff --git a/templates/add_user.html b/templates/add_user.html
+index 390e5fe..f1a3612 100644
+--- a/templates/add_user.html
++++ b/templates/add_user.html
+@@ -41,7 +41,7 @@
+ 
+                 <label>ФИО</label>
+ 
+-                <input class="form-control" type="text" name="name" required>
++                <input class="form-control" type="text" name="fio" required>
+ 
+ 
+ 

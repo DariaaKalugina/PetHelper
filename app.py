@@ -1,10 +1,9 @@
 from flask import Flask
 from flask import render_template
-import db
 from flask import request, redirect
 import sqlite3
+import db
 app = Flask(__name__)
-
 
 
 def dict_factory(cursor, row):
@@ -16,7 +15,19 @@ def dict_factory(cursor, row):
 
 @app.route('/')
 def index():
-    return render_template('page01.html')
+    # connecting to db
+    conn = sqlite3.connect('app.db')
+    conn.row_factory = dict_factory
+    c = conn.cursor()
+
+    # Handler logic here
+    c.execute("SELECT * FROM users")
+    users = list(c.fetchall())
+
+    # Close connection
+    conn.close()
+    # Return resulting HTML
+    return render_template('page01.html', users=users)
 
 
 @app.route('/sing_in')
@@ -33,10 +44,9 @@ def ads():
 def newad():
     return render_template('newad.html')
 
+
 @app.route('/user/<username>/')
-
 def user_page(username):
-
     conn = sqlite3.connect('app.db')
     conn.row_factory = dict_factory
     c = conn.cursor()
@@ -47,21 +57,15 @@ def user_page(username):
     users = list(c.fetchall())
 
     # Close connection
-
     conn.close()
     return render_template("userpage.html", user=username)
 
 
-
-
 @app.route('/add_user', methods=['GET', 'POST'])
-
 def add_user():
-
 
     user_created = False
     error_message = ""
-
 
     if request.method == 'POST':
 
@@ -69,59 +73,56 @@ def add_user():
 
         user = {}
         user['username'] = request.form.get('username')
-        user['name'] = request.form.get('name')
+        user['fio'] = request.form.get('fio')
         user['password'] = request.form.get('password')
         user['datebirth'] = request.form.get('datebirth')
         user['metro'] = request.form.get('metro')
         user['tel'] = request.form.get('tel')
         user['info'] = request.form.get('info')
 
-
-
         # save to database
-
         conn = sqlite3.connect('app.db')
         c = conn.cursor()
+
         c.execute("SELECT * FROM users where username='%s'" % user['username'])
 
         if c.fetchone():
-
             # user with this login is already in my database
-
             error_message = "user_exists"
-
         else:
 
             c.execute("INSERT INTO users "
-                      "( name, username, password, datebirth, metro, tel, info) "
+                      "( username, password, datebirth, metro, tel, info) "
                       "VALUES "
-                      "('{name}', '{username}', '{password}', '{datebirth}','{metro}','{tel}','{info}')"
-                      "".format(**user))
-
+                      "('{username}', '{password}', '{datebirth}','{metro}','{tel}','{info}')".format(**user))
             conn.commit()
-
             user_created = True
-
         conn.close()
-
         # redirect to user page
-
-        return redirect('/profile/%s/' % user['username'])
+        return redirect('/user/%s/' % user['username'])
 
     return render_template(
-
         "add_user.html",
         user_created=user_created,
         error_message=error_message
-
     )
 
 
 @app.route('/search')
 def search_for_person():
     q = request.args.get('query')
-    users = db.get_users_by_name(q)
-    return render_template('page01.html', q=q, users=users)
 
+    conn = sqlite3.connect('app.db')
+    conn.row_factory = dict_factory
+    c = conn.cursor()
+
+    # Handler logic here
+    c.execute("SELECT * FROM users WHERE fio LIKE '%{q}%' OR username LIKE '%{q}%'"
+              "".format(q=q))
+    users = list(c.fetchall())
+
+    conn.close()
+
+    return render_template('search_results.html', q=q, user=users)
 
 app.run()
