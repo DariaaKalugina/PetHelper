@@ -20,8 +20,6 @@ CREATE TABLE users (
 ''')
 
 conn.commit()
-
-
 # Our base data
 users = [
     {
@@ -59,6 +57,7 @@ c.execute('''
     WHERE username="Bread"
 ''')
 conn.commit()
+
 
 #Adding it in the loop
 for user in users:
