@@ -26,6 +26,14 @@ _users = {
     }
 }
 
+_user_list = []
+
+for login, user_data in _users.items():
+    _new_element = {'login': login}
+    _new_element.update(user_data)
+    _user_list.append(_new_element)
+
+
 # Get users filtered by name
 def get_users_by_name(q):
     results = []

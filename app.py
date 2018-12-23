@@ -54,11 +54,11 @@ def user_page(username):
     # Handler logic here
 
     c.execute("SELECT * FROM users WHERE username LIKE'%%%s%%'" % username)
-    users = list(c.fetchall())
+    user_data = list(c.fetchall())
 
     # Close connection
     conn.close()
-    return render_template("userpage.html", user=username)
+    return render_template("userpage.html", user=user_data)
 
 
 @app.route('/add_user', methods=['GET', 'POST'])
