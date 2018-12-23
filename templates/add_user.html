@@ -12,10 +12,31 @@
     <title>Регистрация</title>
 
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand"><p style="font-weight: bold; color: purple">PetHelper</p></a>
-</nav>
 <body>
+<p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand"><p style="font-weight: bold; color: purple;">PetHelper</p></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item active">
+        <a class="nav-link" href="ads"><button type="button" class="btn btn-outline-success">Объявления</button> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="sing_in"><button type="button" class="btn btn-outline-success">Войти</button></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="/"><button type="button" class="btn btn-outline-success">Назад</button></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<p>
 
     {% if user_created %}
 
